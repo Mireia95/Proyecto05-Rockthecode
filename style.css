@@ -1,0 +1,62 @@
+@import url('https://fonts.googleapis.com/css2?family=Jaro:opsz@6..72&display=swap');
+
+:root {
+  /* colors */
+  --gh-color01: #ffffff;
+  --gh-color02: #2b545e;
+
+  --gh-colorpuzzle01: #e5e4e4;
+
+  --gh-colorTres01: #455848;
+
+  /* BG */
+  --gh-color-BG: var(--gh-color01);
+  /* texto */
+
+  /* font-size */
+
+  /* gap */
+
+  /* border radius */
+  --gh-border-radius: 20px;
+  --gh-border-radius-tres: 50px;
+
+  /* button */
+  --gh-catchingPLAY: var(--gh-color02);
+
+  /* padding */
+  --gh-padding-xs: 5px;
+  --gh-padding-s: 10px;
+  --gh-padding-m: 20px;
+  --gh-padding-l: 40px;
+  --gh-padding-xl: 50px;
+
+  /* margin */
+  --gh-margin-s: 10px;
+  --gh-margin-m: 20px;
+  --gh-margin-l: 40px;
+
+  /* gap */
+  --gh-gap: 20px;
+}
+
+* {
+  font-family: 'Figtree', sans-serif;
+  text-decoration: none;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  box-sizing: border-box;
+}
+
+h1 {
+  font-family: 'Jaro', sans-serif;
+}
+
+body {
+  background-color: var(--gh-color-BG);
+}
+
+button {
+  cursor: pointer;
+}

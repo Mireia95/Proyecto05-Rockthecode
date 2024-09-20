@@ -1,0 +1,35 @@
+header {
+  width: 100%;
+  padding: var(--gh-padding-m);
+  margin-bottom: 60px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  align-content: flex-start;
+  gap: 30px;
+}
+
+h1 {
+  display: inline;
+}
+
+.title {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.title > img {
+  width: 60px;
+  transform: rotate(-20deg);
+}
+
+header > button {
+  padding: var(--gh-padding-s) var(--gh-padding-m);
+  border-radius: var(--gh-border-radius);
+  background-color: white;
+  width: 200px;
+  height: 60px;
+}

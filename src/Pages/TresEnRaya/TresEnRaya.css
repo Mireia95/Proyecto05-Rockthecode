@@ -1,0 +1,19 @@
+#tres {
+  width: 400px;
+  height: 400px;
+  border-radius: var(--gh-border-radius-tres);
+  background-color: var(--gh-colorTres01);
+  margin: auto;
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+}
+
+.celda {
+  border: 5px solid var(--gh-color-BG);
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
