@@ -1,7 +1,7 @@
 header {
   width: 100%;
   padding: var(--gh-padding-m);
-  margin-bottom: 60px;
+  margin-bottom: 40px;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -29,7 +29,10 @@ h1 {
 header > button {
   padding: var(--gh-padding-s) var(--gh-padding-m);
   border-radius: var(--gh-border-radius);
-  background-color: white;
+  background-color: var(--gh-color01);
+  color: var(--gh-color02);
   width: 200px;
   height: 60px;
+  border: 2px solid var(--gh-color02);
+  font-weight: 600;
 }

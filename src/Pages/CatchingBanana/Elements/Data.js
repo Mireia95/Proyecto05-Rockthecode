@@ -1,0 +1,1 @@
+export const arrayPosActive = []; //guardo las posiciones left asignadas a los elementos que caen para comprobar a la hora de generar un nuevo elemento, que no se pise con el anterior. Al dsaparecer el elemento borramos su posicion en el array

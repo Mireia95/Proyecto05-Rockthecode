@@ -1,3 +1,11 @@
+import './PrintWinner.css';
+import './PrintDraw.css';
+
+import '../../components/Utils/Anims.css';
+import { updateWins } from './TotWins';
+import { printWinner } from './PrintWinner';
+import { printDraw } from './PrintDraw';
+
 export const checkWinner = (arrayCeldas) => {
   //creo un array con combinaciones ganadoras
   let winCombinations = [
@@ -11,13 +19,14 @@ export const checkWinner = (arrayCeldas) => {
     [2, 4, 6]
   ];
 
+  let winner = false; //variable para saber si hay un ganador
+
   //creo un ciclo for para iterar las posibles posiciones ganadoras y comprobar si están en el arrayCeldas.
   //cada vez que itero compruebo si las posiciones ganadoras en mi arrayCeldas tienen la misma string (llevan o la X o el O). Si son iguales, hay un ganador :)
-
   for (let i = 0; i < winCombinations.length; i++) {
-    const pos1 = winCombinations[i][0];
-    const pos2 = winCombinations[i][1];
-    const pos3 = winCombinations[i][2];
+    const pos1 = winCombinations[i][0]; //el primer numero de cada combinacion
+    const pos2 = winCombinations[i][1]; //el primer numero de cada combinacion
+    const pos3 = winCombinations[i][2]; //el primer numero de cada combinacion
 
     if (arrayCeldas[pos1] != '') {
       if (
@@ -25,8 +34,16 @@ export const checkWinner = (arrayCeldas) => {
         arrayCeldas[pos1] === arrayCeldas[pos3]
       ) {
         const player = arrayCeldas[pos1];
-        console.log(`ha vinto il player ${player}`);
+        console.log(`ha ganado el player ${player}`);
+        printWinner(player, arrayCeldas);
+        updateWins(player);
+        winner = true;
       }
     }
+  }
+  //para saber si hay empate chequeo que winner sea false, y que ninguna celda esté vacía
+  if (!winner && arrayCeldas.every((celda) => celda !== '')) {
+    console.log('empate');
+    printDraw(arrayCeldas); //pinta el empate
   }
 };

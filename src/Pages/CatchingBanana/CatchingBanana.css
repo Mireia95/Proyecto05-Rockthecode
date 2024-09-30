@@ -7,6 +7,7 @@
   background-size: cover;
   margin: auto;
   padding: var(--gh-padding-s);
+  overflow: hidden;
 }
 
 .play {
@@ -48,12 +49,7 @@
   transform: translateX(-50%);
 }
 
-.life {
-  width: 30px;
-}
-
-.banana {
+.element {
   width: 50px;
   position: absolute;
-  top: 20px;
 }

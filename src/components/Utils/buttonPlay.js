@@ -11,7 +11,7 @@ export const createButtonPlay = () => {
 
 //cuando hago click
 export const buttonPlayEvent = (buttonPlay) => {
-  buttonPlay.classList.add('pressed'); //animacion OUT
+  //buttonPlay.classList.add('pressed'); //animacion OUT
   //elimino el boton PLAY despues de 1 segundo, que es cuanto dura la animacion
   buttonPlay.remove();
   /*  setTimeout(() => {

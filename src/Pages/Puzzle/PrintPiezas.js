@@ -10,7 +10,7 @@ export const createPiezas = (listPiezas) => {
   //mezclar el array con las piezas para pintarlas mezcladas, no en orden
   listPiezas.reverse(); //lo pongo en reverse para que se intuya menos
 
-  //Fisher-Yates:
+  //metodo Fisher-Yates para mezclar elementos del array:
   for (let i = 0; i < listPiezas.length; i++) {
     let randomPos = Math.floor(Math.random() * listPiezas.length);
     let temp = listPiezas[i]; //guardo pos del bucle

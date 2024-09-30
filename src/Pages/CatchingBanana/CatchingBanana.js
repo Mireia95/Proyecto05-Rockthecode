@@ -1,26 +1,27 @@
 //*juegos Catching banana
-
+import './CatchingBanana.css';
 import {
   buttonPlayEvent,
   createButtonPlay
 } from '../../components/Utils/buttonPlay';
-import './CatchingBanana.css';
+
 import { startCathing } from './StartCatching';
+import { cleanMain } from '../../components/Utils/CleanMain';
+import { printHighScore } from './Score&Lifes/Highscore';
+import { createMusicCatching } from '../../components/Utils/Music';
 
 //inicializar el juego
 export const initCatch = () => {
+  cleanMain();
   const main = document.querySelector('main');
-  main.innerHTML = ''; //limpio el main
   const divGame = document.createElement('div');
   divGame.id = 'catching';
   const buttonPlay = createButtonPlay();
   //añado musica al juego
-  const music = document.createElement('audio');
-  music.src = './public/assets/CatchingBanana/BGMusic.mp3';
+  const music = createMusicCatching();
 
   buttonPlay.addEventListener('click', () => {
     //empieza la  musica
-    music.volume = '0.3';
     music.play();
     buttonPlayEvent(buttonPlay);
     startCathing();

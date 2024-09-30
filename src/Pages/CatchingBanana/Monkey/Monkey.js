@@ -8,7 +8,6 @@ export const printMonkey = () => {
   imgMonkey.className = 'monkey';
 
   document.addEventListener('keydown', (e) => {
-    //se mueve el personaje según las flechas que toca el usuario
     moveMonkey(e, imgMonkey);
   });
 
@@ -21,11 +20,13 @@ const moveMonkey = (e, monkey) => {
   let limitRight = divGame.offsetWidth - 60; //con offsetWidth obtengo el width del divGames. Le resto 60 para darle un margen de limite y que el personaje no salga de los bordes
   let limitLeft = 60; //limite movimiento izquierda
   let posX = monkey.offsetLeft; //con offsetLeft obtengo la posicion en X del monkey segun su elemento padre (divGames)
+  let speed = 3;
+
   if (e.key === 'ArrowRight') {
-    //si la pos del mono es < del limite derecho establecido, entonces muevete a la derecha
+    //si la pos del mono es < del limite derecho establecido, y se puede mover, entonces muevete a la derecha
     if (posX < limitRight) {
-      posX += 5; //le sumo 5 para que se mueva
-      monkey.style.left = posX + 'px'; //le paso el nuevo numero a style.left
+      let posX = monkey.offsetLeft; //con offsetLeft obtengo la posicion en X del monkey segun su elemento padre (divGames)
+      monkey.style.left = posX + speed + 'px'; //le paso el nuevo numero a style.left
     }
   }
 

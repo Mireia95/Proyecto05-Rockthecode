@@ -5,9 +5,14 @@
   --gh-color01: #ffffff;
   --gh-color02: #2b545e;
 
+  /* color catching banana */
+  --gh-color-score: #ffe300;
+
+  /* color puzzle */
   --gh-colorpuzzle01: #e5e4e4;
 
-  --gh-colorTres01: #455848;
+  /* color Tres en raya */
+  --gh-colorTres01: #00756d;
 
   /* BG */
   --gh-color-BG: var(--gh-color01);
