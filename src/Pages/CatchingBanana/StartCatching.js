@@ -10,13 +10,10 @@ import { printScoreAndLife } from './Score&Lifes/Score&Life';
 export const startCathing = () => {
   const divGame = document.querySelector('#catching');
   printMonkey(); //creo y pinto el personaje
-
   printScoreAndLife(); //Pinto el div para el score y las vidas
 
-  //pinto las bananas que bajan con un setInterval. Pinta solo si el jugador tiene vidas
-
+  //*pinto las bananas que bajan con un setInterval. Pinta solo si el jugador tiene vidas
   let bananaInterval; //interval para pintar las bananas
-
   bananaInterval = setInterval(() => {
     const lifes = document.querySelectorAll('.life'); //chequeo las vidas en el juego
     console.log(lifes);
@@ -28,6 +25,18 @@ export const startCathing = () => {
       clearInterval(bananaInterval);
     }
   }, 3000);
+
+  //!pinto las ramas que bajan con un setInterval. Pinta solo si el jugador tiene vidas
+  let ramaInterval; //interval para pintar las bananas
+  ramaInterval = setInterval(() => {
+    const lifes = document.querySelectorAll('.life'); //chequeo las vidas en el juego
+    //si hay vidas, pinto bananas, si no hay vidas pinto gameover y paro el juego
+    if (lifes.length > 0) {
+      printRama(); //creo y pinto las bananas que bajan
+    } else if (lifes.length === 0) {
+      clearInterval(ramaInterval);
+    }
+  }, 4000);
 
   const buttonStop = createButtonStop(); //creo botón STOP juego
 

@@ -1,6 +1,6 @@
 import { printGameOver } from '../Gameover/Gameover';
 import { checkLifes } from '../Score&Lifes/Lifes';
-import { addScore, subTrackScore } from './ChangeScore';
+import { addScore, subTrackScore } from '../Score&Lifes/ChangeScore';
 import { checkCollision } from './CheckCollision';
 import { removeLife } from './RemoveLife';
 
@@ -12,10 +12,9 @@ export const moveElement = (element, type) => {
   const divGame = document.querySelector('#catching');
   let isCollision = checkCollision(element); //isCollision será true si hay colision, y false si no hay colision
 
-  //!comprobar las vidas
+  //comprobar las vidas
   let currentLifes = checkLifes();
   if (currentLifes === 0) {
-    console.log('gameover');
     //para evitar que se pinte el gameover mas veces, para todas las bananas en el juego, chequeo que no esté ya cread
     const gameover = document.querySelector('.gameover');
     if (!gameover) {
@@ -39,10 +38,19 @@ export const moveElement = (element, type) => {
       element.remove();
       return; //paro la funcion ,porque el elemento se ha eliminado
     }
-  } else {
-    //type is bad, es la rama
+  }
+
+  if (type === 'bad') {
+    //si el type es bad es la rama
+    //si ha habido la primera colision sumo puntos al score
     if (isCollision) {
       subTrackScore();
+      element.remove();
+      return; //paro la funcion ,porque el elemento se ha eliminado
+    }
+
+    //si el elemento llega hasta el final de la pantalla sin colision, entonces quito 1 vida y elimino el elemento
+    if (parseInt(element.style.top) === divGame.offsetHeight - 50) {
       element.remove();
       return; //paro la funcion ,porque el elemento se ha eliminado
     }

@@ -14,7 +14,12 @@ const createRama = () => {
   arrayPosActive.push(randomX); //añado posicion al array de posiciones
   console.log(arrayPosActive);
 
-  //asigno la posicion X a la banana
+  //para que el juego no se rompa elimino la primera posicion para que pueda pintarse otro nuevo elemento. Si llega a mas de 6 no encuentra ningun randomX disponible y alli el juego se para
+  if (arrayPosActive.length > 5) {
+    arrayPosActive.shift(); //elimino la primera posicion
+  }
+
+  //asigno la posicion X a la rama
   assignPosX(rama, randomX);
   return rama;
 };
