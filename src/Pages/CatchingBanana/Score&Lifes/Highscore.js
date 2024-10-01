@@ -4,7 +4,6 @@ import './Highscore.css';
 
 //pinto el score en la pantalla del juego. Le paso como argumento a la funcion el array que guarda los 3 mejores scores
 export const printHighScore = (arrayScore) => {
-  console.log(arrayScore);
   const divGame = document.querySelector('#catching');
 
   const divScore = document.createElement('div');
@@ -33,7 +32,7 @@ export const printHighScore = (arrayScore) => {
     divScore.remove();
   });
 
-  h2.innerText = 'HIGH SCORE'; //falta ponerle el font family
+  h2.innerText = 'HIGH SCORE';
 
   divScore.className = 'highScore';
 

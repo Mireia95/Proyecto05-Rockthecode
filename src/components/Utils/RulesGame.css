@@ -1,0 +1,13 @@
+@import url('https://fonts.googleapis.com/css2?family=Lilita+One&display=swap');
+
+.rulesCatching {
+  padding: var(--gh-padding-m);
+  background-color: var(--gh-color03);
+  font-family: 'Lilita One', sans-serif;
+  font-size: 14px;
+  color: var(--gh-color02);
+  border-radius: var(--gh-border-radius);
+  width: 70%;
+  margin: auto;
+  margin-top: var(--gh-margin-l);
+}

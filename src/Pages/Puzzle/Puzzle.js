@@ -9,6 +9,7 @@ import { createPiezas, printPiezas } from './PrintPiezas';
 import { startGame } from './StartGame.js';
 import './Puzzle.css';
 import { cleanMain } from '../../components/Utils/CleanMain.js';
+import { printTimer } from './Timer/Timer.js';
 
 let listPiezas = [];
 
@@ -26,13 +27,15 @@ export const initPuzzle = () => {
   buttonPlay.addEventListener('click', () => {
     buttonPlayEvent(buttonPlay); //para la animacion
     divGame.style.backgroundImage = 'none';
-    //?divGame.classList.add('startPuzzle');
-    main.append(divPiezas); //pinto el div Piezas
 
+    printTimer(); //pinto el timer para el juego
+
+    main.append(divPiezas); //pinto el div Piezas
     //creo piezas y demas
     createPiezas(listPiezas); //creo las piezas del puzzle y las inserto dentro el array listPiezas
     printPiezas(listPiezas, divPiezas); //una vez creadas las pinto en mi pagina
     printBlank(); //funcion para pintar los divs vacíos dentro de la grid de divGame
+
     startGame(); //play the game
   });
 

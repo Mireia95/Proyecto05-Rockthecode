@@ -11,3 +11,10 @@ export const reloadCatching = () => {
     "<img src='./public/assets/CatchingBanana/reload.png' alt'reload' />";
   return buttonReload;
 };
+
+export const reloadPuzzle = () => {
+  const buttonReload = document.createElement('button');
+  buttonReload.innerHTML =
+    "<img src='./public/assets/CatchingBanana/reload.png' alt'reload' />";
+  return buttonReload;
+};

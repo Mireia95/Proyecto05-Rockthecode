@@ -26,7 +26,7 @@ export const startCathing = () => {
     }
   }, 3000);
 
-  //!pinto las ramas que bajan con un setInterval. Pinta solo si el jugador tiene vidas
+  //pinto las ramas que bajan con un setInterval. Pinta solo si el jugador tiene vidas
   let ramaInterval; //interval para pintar las bananas
   ramaInterval = setInterval(() => {
     const lifes = document.querySelectorAll('.life'); //chequeo las vidas en el juego

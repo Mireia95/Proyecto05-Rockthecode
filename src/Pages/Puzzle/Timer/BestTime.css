@@ -1,0 +1,14 @@
+#puzzle > .highScore {
+  width: 60%;
+  height: 60%;
+  border: none;
+  background-color: var(--gh-color01);
+}
+
+#puzzle > .highScore > h2 {
+  color: var(--gh-color02);
+}
+
+#puzzle > .highScore > button {
+  margin-top: var(--gh-margin-m);
+}

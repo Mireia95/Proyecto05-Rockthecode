@@ -15,7 +15,7 @@ export const moveElement = (element, type) => {
   //comprobar las vidas
   let currentLifes = checkLifes();
   if (currentLifes === 0) {
-    //para evitar que se pinte el gameover mas veces, para todas las bananas en el juego, chequeo que no esté ya cread
+    //para evitar que se pinte el gameover mas veces, para todas las bananas en el juego, chequeo que no esté ya creado
     const gameover = document.querySelector('.gameover');
     if (!gameover) {
       printGameOver();
@@ -57,6 +57,7 @@ export const moveElement = (element, type) => {
   }
 
   let speed = 1; //speed con la cual bajarán los elementos
+
   let Y = parseInt(element.style.top);
   element.style.top = Y + speed + 'px'; //actualizo la altura del elemento para que baje segun el speed
 

@@ -10,14 +10,17 @@
   position: relative;
 }
 
-/* .startPuzzle {
-  background-color: var(--gh-colorpuzzle01);
-} */
+/* muevo el boton play al centro. De default está un poco mas abajo para dejar espacio al texto con la explicacion del juego */
+#puzzle > .play {
+  top: 50%;
+}
 
 #puzzle > div {
   /* clase de los grid items blancos al empezar el juego */
   background-color: var(--gh-colorpuzzle01);
   border: 1px solid rgb(167, 167, 167);
+  width: 150px;
+  height: 150px;
 }
 
 .piezas {
