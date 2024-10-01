@@ -8,8 +8,10 @@ import { printBlank } from './PiezasBlank';
 import { createPiezas, printPiezas } from './PrintPiezas';
 import { startGame } from './StartGame.js';
 import './Puzzle.css';
+import '../../components/Utils/RulesGame.css';
 import { cleanMain } from '../../components/Utils/CleanMain.js';
 import { printTimer } from './Timer/Timer.js';
+import { createRulesPuzzle } from '../../components/Utils/RulesGame.js';
 
 let listPiezas = [];
 
@@ -24,6 +26,8 @@ export const initPuzzle = () => {
   divGame.id = 'puzzle';
   divPiezas.className = 'piezas';
 
+  const rulesGame = createRulesPuzzle();
+
   buttonPlay.addEventListener('click', () => {
     buttonPlayEvent(buttonPlay); //para la animacion
     divGame.style.backgroundImage = 'none';
@@ -36,9 +40,12 @@ export const initPuzzle = () => {
     printPiezas(listPiezas, divPiezas); //una vez creadas las pinto en mi pagina
     printBlank(); //funcion para pintar los divs vacíos dentro de la grid de divGame
 
+    rulesGame.remove();
+
     startGame(); //play the game
   });
 
+  divGame.append(rulesGame);
   divGame.append(buttonPlay);
   main.append(divGame);
 };

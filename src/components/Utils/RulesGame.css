@@ -1,5 +1,3 @@
-@import url('https://fonts.googleapis.com/css2?family=Lilita+One&display=swap');
-
 .rulesCatching {
   padding: var(--gh-padding-m);
   background-color: var(--gh-color03);
@@ -8,6 +6,23 @@
   color: var(--gh-color02);
   border-radius: var(--gh-border-radius);
   width: 70%;
+  margin: auto;
+  margin-top: var(--gh-margin-l);
+}
+
+.rulesPuzzle {
+  padding: var(--gh-padding-m);
+  background-color: var(--gh-color03);
+  font-family: 'Lilita One', sans-serif;
+  font-size: 15px;
+  color: var(--gh-color02);
+  border-radius: var(--gh-border-radius);
+  position: absolute;
+  left: 50%;
+  top: 20px;
+  transform: translateX(-50%);
+  width: 230px;
+  text-align: center;
   margin: auto;
   margin-top: var(--gh-margin-l);
 }
