@@ -17,6 +17,12 @@ const createBanana = () => {
   arrayPosActive.push(randomX); //añado posicion al array de posiciones
 
   //para que el juego no se rompa elimino la primera posicion para que pueda pintarse otro nuevo elemento. Si llega a mas de 6 no encuentra ningun randomX disponible y alli el juego se para
+  //?para el responsive tengo que saber el width de mi divGame. Para saber cuantos elementos pueden pintarse. Si el divGame es < 360 quiere decir que estoy en una pantalla de movil, entonces pintaré en posX random menos elementos, porque cabrán menos ya que el width es menor y tenemos margen entre elementos
+  const divGame = document.querySelector('#catching');
+  let divGameWidth = divGame.offsetWidth;
+  if (divGameWidth < 360) {
+    //?responsive
+  }
   if (arrayPosActive.length > 5) {
     arrayPosActive.shift(); //elimino la primera posicion
   }

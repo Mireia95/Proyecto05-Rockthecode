@@ -17,8 +17,19 @@ export const printMonkey = () => {
 //funcion que controla el movimiento del monkey
 const moveMonkey = (e, monkey) => {
   const divGame = document.querySelector('#catching');
-  let limitRight = divGame.offsetWidth - 60; //con offsetWidth obtengo el width del divGames. Le resto 60 para darle un margen de limite y que el personaje no salga de los bordes
-  let limitLeft = 60; //limite movimiento izquierda
+  //quiero darle un margen de limite al monkey y que el personaje no salga de los bordes.
+  //chequeo si estoy en una pantalla grande o pequeña y doy margen diferente
+  //hago lo mismo con el margen izquierdo y derecho
+  let limitRight;
+  let limitLeft;
+  if (divGame.offsetWidth < 360) {
+    limitRight = divGame.offsetWidth - 40; //con offsetWidth obtengo el width del divGames. Estamos en pantalla pequeña. Le resto 40 para darle un margen de limite
+    limitLeft = 40;
+  } else {
+    limitRight = divGame.offsetWidth - 60; //estamos en pantalla grande. Le resto 60 para darle un margen de limite
+    limitLeft = 60;
+  }
+
   let posX = monkey.offsetLeft; //con offsetLeft obtengo la posicion en X del monkey segun su elemento padre (divGames)
   let speed = 5;
 

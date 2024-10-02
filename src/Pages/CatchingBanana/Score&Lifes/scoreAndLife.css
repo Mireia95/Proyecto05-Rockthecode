@@ -39,3 +39,9 @@
 .life {
   width: 30px;
 }
+
+@media (max-width: 620px) {
+  .life {
+    width: 15px;
+  }
+}

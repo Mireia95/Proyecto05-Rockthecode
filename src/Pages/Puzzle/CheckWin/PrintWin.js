@@ -4,6 +4,7 @@ import { initPuzzle } from '../Puzzle';
 import { saveTime } from '../Timer/SaveTime';
 import { printBestTime } from '../Timer/BestTime';
 import './Win.css';
+import './WinResponsive.css';
 
 export const printWin = () => {
   const divGame = document.querySelector('#puzzle');

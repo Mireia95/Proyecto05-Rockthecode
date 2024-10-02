@@ -34,3 +34,13 @@
   width: 100%;
   height: 100%;
 }
+
+@media (max-width: 620px) {
+  .gameover {
+    font-size: 30px;
+  }
+  .buttGameOver > button {
+    width: 40px;
+    height: 40px;
+  }
+}

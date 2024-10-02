@@ -1,5 +1,6 @@
 //*juegos Catching banana
 import './CatchingBanana.css';
+import './CatchingWebResponsive.css';
 import {
   buttonPlayEvent,
   createButtonPlay

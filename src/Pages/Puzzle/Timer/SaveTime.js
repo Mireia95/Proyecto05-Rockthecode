@@ -13,7 +13,7 @@ export const saveTime = () => {
   console.log(timesArray);
 
   if (timesArray.length > 3) {
-    timesArray.pop(); //elimino el ultimo score, par que guarde solo los primeros 3
+    timesArray.pop(); //elimino el ultimo score, para que guarde solo los primeros 3
   }
 
   localStorage.setItem('times', JSON.stringify(timesArray));

@@ -2,7 +2,16 @@
 export const posXrandom = (arrayPosActive) => {
   console.log(arrayPosActive);
   const divGame = document.querySelector('#catching');
-  const margen = 60; //margen entre elementos
+
+  //doy un valor al margen entre elementos dependiendo si estamos en una pantalla grande o pequeña
+  let margen;
+  if (divGame.offsetWidth < 360) {
+    //quiere decir pantalla movil
+    margen = 35; //poruqe el elemento es width=30px
+  } else {
+    margen = 60;
+  }
+
   const limitX = divGame.offsetWidth - 100; //limite del div donde pueden crearse los elementos
 
   //chequeo si la pos X del nuevo elemento que voy a crear (banana, o rama) está bien. Puede crearse solo si respecta un margen con las otras posiciones de los elementos ya existentes. Las posiciones existentes estan guardadas en el array arrayPosActive

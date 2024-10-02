@@ -8,6 +8,7 @@ import { printBlank } from './PiezasBlank';
 import { createPiezas, printPiezas } from './PrintPiezas';
 import { startGame } from './StartGame.js';
 import './Puzzle.css';
+import './PuzzleResponsive.css';
 import '../../components/Utils/RulesGame.css';
 import { cleanMain } from '../../components/Utils/CleanMain.js';
 import { printTimer } from './Timer/Timer.js';

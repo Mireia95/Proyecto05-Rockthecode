@@ -26,3 +26,20 @@
   margin: auto;
   margin-top: var(--gh-margin-l);
 }
+
+/* responsive */
+@media (max-width: 620px) {
+  .rulesCatching {
+    padding: var(--gh-padding-s);
+    font-family: 'Lilita One', sans-serif;
+    font-size: 12px;
+    width: 70%;
+    margin: auto;
+    margin-top: var(--gh-margin-l);
+  }
+
+  .rulesPuzzle {
+    padding: var(--gh-padding-s);
+    font-size: 12px;
+  }
+}

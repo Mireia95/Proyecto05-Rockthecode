@@ -26,3 +26,18 @@
   font-size: 80px;
   margin-bottom: var(--gh-margin-s);
 }
+
+@media (max-width: 620px) {
+  .winner {
+    gap: 15px;
+  }
+
+  .winner > p {
+    font-size: 15px;
+  }
+
+  .winner > h3 {
+    font-weight: 400;
+    font-size: 60px;
+  }
+}

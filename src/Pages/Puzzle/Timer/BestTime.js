@@ -18,6 +18,9 @@ export const printBestTime = (arrayTime) => {
     h3Pos.innerText = `${i + 1} `;
 
     const h4Time = document.createElement('h4');
+    if (arrayTime[i] === undefined) {
+      arrayTime[i] = ' ';
+    }
     h4Time.innerText = `${arrayTime[i]}`;
 
     divPos.append(h3Pos);

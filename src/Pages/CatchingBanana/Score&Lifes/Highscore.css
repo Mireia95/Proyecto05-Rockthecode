@@ -59,3 +59,30 @@
 .highScore > button > img {
   width: 100%;
 }
+
+@media (max-width: 620px) {
+  .highScore {
+    width: 60%;
+    height: 70%;
+  }
+
+  .highScore > h2 {
+    font-size: 20px;
+    margin-bottom: var(--gh-margin-xs);
+  }
+
+  .highScore > div > h3 {
+    left: 10px;
+    font-size: 15px;
+  }
+
+  .highScore > div > h4 {
+    font-size: 15px;
+  }
+
+  .highScore > button {
+    width: 30px;
+    height: 30px;
+    margin-top: var(--gh-margin-m);
+  }
+}

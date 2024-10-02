@@ -2,6 +2,7 @@ import { cleanMain } from '../../components/Utils/CleanMain';
 import { printCell } from './Cell';
 import { printWins } from './Winner/TotWins';
 import './TresEnRaya.css';
+import './TresEnRayaResponsive.css';
 import { printPlayerturn } from './Turn';
 import { checkWinner } from './Winner/CheckWinner';
 
