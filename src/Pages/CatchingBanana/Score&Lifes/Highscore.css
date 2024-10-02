@@ -16,6 +16,10 @@
   border-radius: var(--gh-border-radius);
 }
 
+.highScore * {
+  font-family: 'Lilita One', sans-serif;
+}
+
 .highScore > h2 {
   color: #efd61d;
   margin-bottom: var(--gh-margin-s);

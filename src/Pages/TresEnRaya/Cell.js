@@ -1,8 +1,3 @@
-import {
-  buttonPlayEvent,
-  createButtonPlay
-} from '../../components/Utils/buttonPlay';
-
 export const printCell = () => {
   const main = document.querySelector('main');
   const divGame = document.createElement('div');
@@ -13,13 +8,6 @@ export const printCell = () => {
     div.className = 'celda';
     divGame.append(div);
   }
-
-  //* BUTTON PLAY SIRVE?
-  /* const buttonPlay = createButtonPlay();
-
-  buttonPlay.addEventListener('click', () => {
-    buttonPlayEvent(buttonPlay);
-  }); */
 
   // divGame.append(buttonPlay);
   main.append(divGame);

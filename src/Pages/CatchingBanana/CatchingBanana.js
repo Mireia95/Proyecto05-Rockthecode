@@ -7,7 +7,6 @@ import {
 
 import { startCathing } from './StartCatching';
 import { cleanMain } from '../../components/Utils/CleanMain';
-import { printHighScore } from './Score&Lifes/Highscore';
 import { createMusicCatching } from '../../components/Utils/Music';
 import { createRulesCatching } from '../../components/Utils/RulesGame';
 
@@ -17,18 +16,17 @@ export const initCatch = () => {
   const main = document.querySelector('main');
   const divGame = document.createElement('div');
   divGame.id = 'catching';
-  const buttonPlay = createButtonPlay();
-  //añado musica al juego
-  const music = createMusicCatching();
+  const buttonPlay = createButtonPlay(); //creo boton play
 
-  const rulesGame = createRulesCatching();
+  const music = createMusicCatching(); //añado musica al juego
+
+  const rulesGame = createRulesCatching(); //pinto las reglas del juego
 
   buttonPlay.addEventListener('click', () => {
-    //empieza la  musica
-    music.play();
-    buttonPlayEvent(buttonPlay);
-    rulesGame.remove();
-    startCathing();
+    music.play(); //empieza la  musica
+    buttonPlayEvent(buttonPlay); //eliminoel boton play
+    rulesGame.remove(); //elimino las reglas
+    startCathing(); //empiezo el juego
   });
 
   divGame.append(rulesGame);

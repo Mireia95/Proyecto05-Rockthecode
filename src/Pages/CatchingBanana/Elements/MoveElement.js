@@ -12,6 +12,8 @@ export const moveElement = (element, type) => {
   const divGame = document.querySelector('#catching');
   let isCollision = checkCollision(element); //isCollision será true si hay colision, y false si no hay colision
 
+  let speed; //speed con la cual bajarán los elementos. Le asigno valor dependiendo de que elemento es
+
   //comprobar las vidas
   let currentLifes = checkLifes();
   if (currentLifes === 0) {
@@ -26,6 +28,7 @@ export const moveElement = (element, type) => {
   if (type === 'good') {
     //si el type es good es la banana
     //si ha habido la primera colision sumo puntos al score
+    speed = 2; //asigno speed a banana
     if (isCollision) {
       addScore();
       element.remove();
@@ -43,7 +46,9 @@ export const moveElement = (element, type) => {
   if (type === 'bad') {
     //si el type es bad es la rama
     //si ha habido la primera colision sumo puntos al score
+    speed = 1; //asigno speed a rama
     if (isCollision) {
+      console.log('has tocado la rama');
       subTrackScore();
       element.remove();
       return; //paro la funcion ,porque el elemento se ha eliminado
@@ -55,8 +60,6 @@ export const moveElement = (element, type) => {
       return; //paro la funcion ,porque el elemento se ha eliminado
     }
   }
-
-  let speed = 1; //speed con la cual bajarán los elementos
 
   let Y = parseInt(element.style.top);
   element.style.top = Y + speed + 'px'; //actualizo la altura del elemento para que baje segun el speed

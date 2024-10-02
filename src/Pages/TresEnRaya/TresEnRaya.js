@@ -1,9 +1,9 @@
 import { cleanMain } from '../../components/Utils/CleanMain';
 import { printCell } from './Cell';
-import { checkWinner } from './ChekWin';
-import { printWins } from './TotWins';
+import { printWins } from './Winner/TotWins';
 import './TresEnRaya.css';
 import { printPlayerturn } from './Turn';
+import { checkWinner } from './Winner/CheckWinner';
 
 let playerX = true; //creo variable para saber quien de los 2 jugadores está jugando
 
@@ -14,7 +14,7 @@ export const initTres = () => {
   cleanMain(); //limpio el main
   printPlayerturn(playerX); //le paso okayerX para saber si es turno de X o O
   printCell(); //pinto mi celda
-  printWins();
+  printWins(); //pinto los juegos ganados de cadas jugador, usando sesionStorage
 
   //evento click en la celda
   const celdasAll = document.querySelectorAll('.celda');
@@ -26,6 +26,7 @@ export const initTres = () => {
   });
 };
 
+//logica del juego
 const play = (celda, index) => {
   //turno de jugador X
   if (playerX === true) {
@@ -46,5 +47,5 @@ const play = (celda, index) => {
       console.log(arrayCeldas);
     }
   }
-  checkWinner(arrayCeldas); //chequeo si hay un ganador
+  checkWinner(arrayCeldas);
 };

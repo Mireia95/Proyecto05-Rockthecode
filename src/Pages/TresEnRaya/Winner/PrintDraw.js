@@ -1,5 +1,5 @@
-import { reloadTris } from '../../components/Utils/buttonReload';
-import { initTres } from './TresEnRaya';
+import { reloadTris } from '../../../components/Utils/buttonReload';
+import { initTres } from '../TresEnRaya';
 
 //funcion para pintar cuando hay  empate
 export const printDraw = (arrayCeldas) => {

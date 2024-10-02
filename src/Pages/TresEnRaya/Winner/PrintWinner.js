@@ -1,5 +1,5 @@
-import { reloadTris } from '../../components/Utils/buttonReload';
-import { initTres } from './TresEnRaya';
+import { reloadTris } from '../../../components/Utils/buttonReload';
+import { initTres } from '../TresEnRaya';
 
 export const printWinner = (player, arrayCeldas) => {
   const divGame = document.querySelector('#tres');

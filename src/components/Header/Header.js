@@ -1,6 +1,3 @@
-import { initCatch } from '../../Pages/CatchingBanana/CatchingBanana';
-import { initPuzzle } from '../../Pages/Puzzle/Puzzle';
-import { initTres } from '../../Pages/TresEnRaya/TresEnRaya';
 import '../Utils/Anims.css';
 import { arrayButtonGames } from './Data';
 import './Header.css';

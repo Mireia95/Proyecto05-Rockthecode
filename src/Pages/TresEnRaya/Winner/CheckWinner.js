@@ -1,7 +1,8 @@
 import './PrintWinner.css';
 import './PrintDraw.css';
 
-import '../../components/Utils/Anims.css';
+import '../../../components/Utils/Anims.css';
+
 import { updateWins } from './TotWins';
 import { printWinner } from './PrintWinner';
 import { printDraw } from './PrintDraw';
