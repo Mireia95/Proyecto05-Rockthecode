@@ -13,6 +13,7 @@ import '../../components/Utils/RulesGame.css';
 import { cleanMain } from '../../components/Utils/CleanMain.js';
 import { printTimer } from './Timer/Timer.js';
 import { createRulesPuzzle } from '../../components/Utils/RulesGame.js';
+import { printBackToHome } from '../../components/Main/BackTohome.js';
 
 let listPiezas = [];
 
@@ -29,13 +30,21 @@ export const initPuzzle = () => {
 
   const rulesGame = createRulesPuzzle();
 
+  divGame.append(rulesGame);
+  divGame.append(buttonPlay);
+  main.append(divGame);
+
+  printBackToHome(); //pinto el boton que permite volver a elegir un juego
+
+  const buttonBack = document.querySelector('.backToHome'); //necesito llamar al boton "volver" para pintar luego el div con las piezas antes que este
+
   buttonPlay.addEventListener('click', () => {
-    buttonPlayEvent(buttonPlay); //para la animacion
+    buttonPlayEvent(buttonPlay); //elimina el boton play. Pendiente añadir animacion
     divGame.style.backgroundImage = 'none';
 
     printTimer(); //pinto el timer para el juego
 
-    main.append(divPiezas); //pinto el div Piezas
+    main.insertBefore(divPiezas, buttonBack); //pinto el div Piezas antes del botón "voler"
     //creo piezas y demas
     createPiezas(listPiezas); //creo las piezas del puzzle y las inserto dentro el array listPiezas
     printPiezas(listPiezas, divPiezas); //una vez creadas las pinto en mi pagina
@@ -45,8 +54,4 @@ export const initPuzzle = () => {
 
     startGame(); //play the game
   });
-
-  divGame.append(rulesGame);
-  divGame.append(buttonPlay);
-  main.append(divGame);
 };

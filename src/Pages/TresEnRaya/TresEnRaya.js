@@ -5,6 +5,7 @@ import './TresEnRaya.css';
 import './TresEnRayaResponsive.css';
 import { printPlayerturn } from './Turn';
 import { checkWinner } from './Winner/CheckWinner';
+import { printBackToHome } from '../../components/Main/BackTohome';
 
 let playerX = true; //creo variable para saber quien de los 2 jugadores está jugando
 
@@ -25,6 +26,8 @@ export const initTres = () => {
       play(celda, index);
     });
   });
+
+  printBackToHome(); //pinto el boton que permite volver a elegir un juego
 };
 
 //logica del juego

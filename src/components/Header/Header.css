@@ -12,6 +12,7 @@ header {
 
 h1 {
   display: inline;
+  font-size: 50px;
 }
 
 .title {
@@ -19,6 +20,7 @@ h1 {
   display: flex;
   justify-content: center;
   align-items: center;
+  margin-top: 150px;
 }
 
 .title > img {
@@ -42,6 +44,14 @@ header > button {
   header {
     margin-bottom: 20px;
     gap: 20px;
+  }
+
+  h1 {
+    font-size: 25px;
+  }
+
+  .title {
+    margin-top: var(--gh-margin-s);
   }
 
   .title > img {

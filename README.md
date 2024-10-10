@@ -1,10 +1,14 @@
 PROYECTO CON JUEGOS
 
-El header tiene 3 botones que permitirán elegir el juego.
+El main tiene 1 seccion con 3 divs que permitirán elegir el juego.
 Dentro la carpeta Componentes estarán:
--Header: el script Data.js contiene los nombres de los juegos. El script Header.js usa estos datos para pintar los botones y inicializar los juegos. Si un día quisiermaos añadir un juego mas podríamos simplemente añadirlo en Data.js, sin tocar Header.js
+-Header: El script Header.js pinta el titulo usa estos datos para pintar los botones y inicializar los juegos.
 
--Main: pinta el <main>
+-Main: pinta el <main>. Tenemos:
+-- el script Data.js contiene los nombres de los juegos y sus funciones para empezarlos. Si un día quisiermaos añadir un juego mas podríamos simplemente añadirlo en Data.js.
+-- el script BacktoHome.js que pinta el botón que sirve para volver atrás a la página donde elegimos los juegos
+-- el script SectionGames.js que pinta la pagina inicial de los juegos.
+
 -Utils : algunos scripts usados durante el desarrollo en mas ocasiones
 
 Dentro la carpeta Pages encontramos subcarpetas con cada juego.

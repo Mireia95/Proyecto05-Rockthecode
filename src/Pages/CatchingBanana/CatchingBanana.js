@@ -10,10 +10,12 @@ import { startCathing } from './StartCatching';
 import { cleanMain } from '../../components/Utils/CleanMain';
 import { createMusicCatching } from '../../components/Utils/Music';
 import { createRulesCatching } from '../../components/Utils/RulesGame';
+import { printBackToHome } from '../../components/Main/BackTohome';
 
 //inicializar el juego
 export const initCatch = () => {
   cleanMain();
+
   const main = document.querySelector('main');
   const divGame = document.createElement('div');
   divGame.id = 'catching';
@@ -34,4 +36,6 @@ export const initCatch = () => {
   divGame.append(buttonPlay);
   divGame.append(music);
   main.append(divGame);
+
+  printBackToHome(); //pinto el boton que permite volver a elegir un juego
 };

@@ -15,7 +15,7 @@
 /* responsive */
 @media (max-width: 620px) {
   .divTimer {
-    width: 90px;
+    width: 120px;
     font-size: 15px;
     margin-bottom: var(--gh-margin-s);
   }

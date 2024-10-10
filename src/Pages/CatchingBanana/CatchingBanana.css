@@ -1,5 +1,5 @@
 #catching {
-  max-width: 600px;
+  width: 600px;
   height: 360px;
   position: relative;
   border-radius: var(--gh-border-radius);
